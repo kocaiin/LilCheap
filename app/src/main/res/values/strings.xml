@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">LitCheap</string>
+    <string name="price_format">$%.2f</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="login">Login</string>
+    <string name="register_here">Register here</string>
+    <string name="register">Register</string>
+    <string name="checkout">Checkout</string>
+    <string name="symbol_minus">-</string>
+    <string name="symbol_plus">+</string>
+    <string name="symbol_remove">X</string>
+    <string name="add_to_cart">Add to Cart</string>
+
+    <!-- total_format: %1$.2f will be replaced by your cart total -->
+    <string name="total_format">Total: $%1$.2f</string>
+
+    <!-- order placed message -->
+    <string name="order_placed">Order placed!</string>
+    <string name="product_image">Product image</string>
+</resources>
