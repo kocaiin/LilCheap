@@ -1,40 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:orientation="vertical">
+    android:padding="24dp">
 
-    <TextView
-        android:id="@+id/tvOrderId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Order ID"
-        android:textStyle="bold"
-        android:textSize="18sp" />
-
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:stepSize="1.0"
-        android:layout_marginTop="16dp" />
-
-    <EditText
-        android:id="@+id/etComment"
+    <!-- 内容部分，距离按钮顶部，上下可滚动 -->
+    <ScrollView
+        android:id="@+id/scrollContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Leave a comment..."
-        android:layout_marginTop="16dp"
-        android:minLines="3"
-        android:gravity="top"
-        android:background="@drawable/edittext_bg" />
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnSubmit">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order ID"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/etComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Leave a comment..."
+                android:layout_marginTop="16dp"
+                android:minLines="3"
+                android:gravity="top"
+                android:background="@drawable/edittext_bg" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 固定底部按钮 -->
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="24dp" />
-</LinearLayout>
+
+</RelativeLayout>
